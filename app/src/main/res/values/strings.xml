@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">HuertoValenciano</string>
+
+
+    <string name="comenzar">COMENZAR</string>
+    <string name="bienvenido">¡BIENVENIDO!</string>
 </resources>
