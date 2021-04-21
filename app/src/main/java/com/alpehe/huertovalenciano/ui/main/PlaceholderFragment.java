@@ -38,7 +38,10 @@ public class PlaceholderFragment extends Fragment {
         switch (index){
             case 1: fragment = new CalendarioFragment();
             break;
-            case 2:
+            case 2: fragment = new PlaceholderFragment();
+                Bundle bundle = new Bundle();
+                bundle.putInt(ARG_SECTION_NUMBER, index);
+                fragment.setArguments(bundle);
             break;
         }
 
