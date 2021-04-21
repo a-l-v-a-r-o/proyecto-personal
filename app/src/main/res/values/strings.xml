@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">HuertoValenciano</string>
+
+    <!--SplashActivity-->
+    <string name="comenzar">COMENZAR</string>
+    <string name="bienvenido">¡BIENVENIDO!</string>
+
+    <!--PrincipalActivity-->
+    <string name="title_activity_principal">Principal</string>
+    <string name="tituloPrincipal">Gestione su huerto</string>
+    <string name="tab_text_1">Calendario</string>
+    <string name="tab_text_2">Mis plantas</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
