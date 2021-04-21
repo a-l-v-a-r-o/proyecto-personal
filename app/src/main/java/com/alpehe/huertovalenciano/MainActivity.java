@@ -1,33 +1,40 @@
 package com.alpehe.huertovalenciano;
 
+import android.os.Bundle;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.tabs.TabLayout;
+
+import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ProgressBar;
+
+import com.alpehe.huertovalenciano.ui.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
-
-    ProgressBar circulo;
-    Button comenzar;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager = findViewById(R.id.view_pager);
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = findViewById(R.id.tabs);
+        tabs.setupWithViewPager(viewPager);
+        FloatingActionButton fab = findViewById(R.id.fab);
 
-        comenzar = (Button) findViewById(R.id.btnComenzar);
-        circulo = (ProgressBar) findViewById(R.id.progressBar);
-
-        comenzar.setOnClickListener(new View.OnClickListener()
-        {
+        fab.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v)
-            {
-                comenzar.setVisibility(View.INVISIBLE);
-                circulo.setVisibility(View.VISIBLE);
+            public void onClick(View view) {
+
+
+                Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
     }
