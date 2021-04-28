@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 .setAction("Action", null).show());
 
         FloatingActionButton fabAjustes = findViewById(R.id.fabAjustes);
-        fabAjustes.setOnClickListener(view -> Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
+        fabAjustes.setOnClickListener(view -> Snackbar.make(view, "Botón para abrir las preferencias", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show());
     }
 
