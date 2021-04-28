@@ -5,11 +5,11 @@
         android:id="@+id/action_settings"
         android:icon="@android:drawable/ic_menu_preferences"
         android:orderInCategory="100"
-        android:title="Ajustes"
+        android:title="@string/ajustes"
         app:showAsAction="always" />
     <item
         android:id="@+id/acercaDe"
         android:icon="@android:drawable/ic_menu_info_details"
-        android:title="Acerca de..."
-        app:showAsAction="always" />
+        android:title="@string/acerca_de"
+        app:showAsAction="ifRoom" />
 </menu>
