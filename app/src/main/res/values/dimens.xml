@@ -9,5 +9,7 @@
     <!-- Overriding sizes of the FAB -->
     <dimen name="fab_size_normal">70dp</dimen>
     <dimen name="fab_size_mini">50dp</dimen>
+    <dimen name="btnSpacing">0dp</dimen>
     <dimen name="icon_size">50dp</dimen>
+    <dimen name="icon_size_mini">30dp</dimen>
 </resources>

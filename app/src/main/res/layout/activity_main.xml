@@ -47,16 +47,12 @@
 
     <com.github.clans.fab.FloatingActionMenu
         android:id="@+id/faMenu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        fab:menu_labels_paddingTop="10dp"
-        fab:menu_labels_paddingRight="14dp"
-        fab:menu_labels_paddingBottom="14dp"
-        fab:menu_labels_paddingLeft="14dp"
-        fab:menu_labels_padding="14dp"
-        app:menu_fab_size="normal">
+        app:menu_fab_size="normal"
+        fab:menu_buttonSpacing="@dimen/btnSpacing">
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/fabAnyadir"
@@ -73,7 +69,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
             android:contentDescription="TODO"
-            android:src="@android:drawable/ic_menu_manage"
+            android:src="@drawable/ic_baseline_settings_30"
             app:fab_size="mini" />
     </com.github.clans.fab.FloatingActionMenu>
 

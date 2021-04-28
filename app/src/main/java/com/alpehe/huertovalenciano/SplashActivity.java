@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -46,15 +47,14 @@ public class SplashActivity extends AppCompatActivity {
                     editor.putInt("contadorInicio", totalCount);
                     editor.apply();
                     //Para que espere 1 segundo
-                    Handler handler = new Handler() {
-                    };handler.postDelayed(new Runnable() {public void run() { IntentPrincipal(); }}, 1000);
+                    new Handler(Looper.getMainLooper()).postDelayed(() -> IntentPrincipal(), 1000);
                 }
             });
         }else{
             comenzar.setVisibility(View.INVISIBLE);
             circulo.setVisibility(View.VISIBLE);
             //Para que espere 1 segundo
-            Handler handler = new Handler() {};handler.postDelayed(new Runnable() {public void run() { IntentPrincipal(); }}, 1500);
+            new Handler(Looper.getMainLooper()).postDelayed(() -> IntentPrincipal(), 1500);
         }
     }
 

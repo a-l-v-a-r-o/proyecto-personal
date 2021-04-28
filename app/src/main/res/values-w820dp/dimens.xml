@@ -8,4 +8,5 @@
     <dimen name="fab_size_normal">90dp</dimen>
     <dimen name="fab_size_mini">60dp</dimen>
     <dimen name="icon_size">80dp</dimen>
+    <dimen name="icon_size_mini">40dp</dimen>
 </resources>
