@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HuertoValenciano">
-        <activity android:name=".MainActivity"
+        <activity android:name=".vista.RiegoActivity"></activity>
+        <activity
+            android:name=".vista.MainActivity"
             android:label="@string/title_activity_principal"
-            android:theme="@style/Theme.HuertoValenciano.NoActionBar"></activity>
-        <activity android:name=".SplashActivity"
+            android:theme="@style/Theme.HuertoValenciano.NoActionBar" />
+        <activity
+            android:name=".vista.SplashActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,4 +1,4 @@
-package com.alpehe.huertovalenciano.ui.main;
+package com.alpehe.huertovalenciano.vista.main;
 
 import android.content.Context;
 
@@ -21,7 +21,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
-        super(fm);
+        super(fm,FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         mContext = context;
     }
 

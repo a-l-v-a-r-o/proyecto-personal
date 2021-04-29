@@ -5,4 +5,12 @@
     <dimen name="appbar_padding">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="appbar_padding_top">8dp</dimen>
+
+    <!-- Overriding sizes of the FAB -->
+    <dimen name="fab_size_normal">70dp</dimen>
+    <dimen name="fab_size_mini">50dp</dimen>
+    <dimen name="btnSpacing">0dp</dimen>
+    <dimen name="icon_size">50dp</dimen>
+    <dimen name="icon_size_mini">30dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
 </resources>
