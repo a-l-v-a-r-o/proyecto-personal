@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.alpehe.huertovalenciano.R;
 import com.alpehe.huertovalenciano.vista.CalendarioFragment;
+import com.alpehe.huertovalenciano.vista.ListaFragment;
 
 /**
  * A placeholder fragment containing a simple view.
@@ -38,10 +39,7 @@ public class PlaceholderFragment extends Fragment {
         switch (index){
             case 1: fragment = new CalendarioFragment();
                 break;
-            case 2: fragment = new PlaceholderFragment();
-                Bundle bundle = new Bundle();
-                bundle.putInt(ARG_SECTION_NUMBER, index);
-                fragment.setArguments(bundle);
+            case 2: fragment = new ListaFragment();
                 break;
         }
 
