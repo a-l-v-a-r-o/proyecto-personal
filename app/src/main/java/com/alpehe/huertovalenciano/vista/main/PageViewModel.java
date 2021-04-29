@@ -1,6 +1,5 @@
-package com.alpehe.huertovalenciano.ui.main;
+package com.alpehe.huertovalenciano.vista.main;
 
-import androidx.arch.core.util.Function;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Transformations;

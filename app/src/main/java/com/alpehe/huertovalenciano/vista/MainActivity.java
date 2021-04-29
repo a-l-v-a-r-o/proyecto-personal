@@ -1,7 +1,10 @@
-package com.alpehe.huertovalenciano;
+package com.alpehe.huertovalenciano.vista;
 
 import android.os.Bundle;
+import android.view.View;
 
+import com.alpehe.huertovalenciano.R;
+import com.alpehe.huertovalenciano.controlador.ControladorPrincipal;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.snackbar.Snackbar;
@@ -10,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.alpehe.huertovalenciano.ui.main.SectionsPagerAdapter;
+import com.alpehe.huertovalenciano.vista.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,12 +32,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         FloatingActionButton fabAnyadir = findViewById(R.id.fabAnyadir);
-        fabAnyadir.setOnClickListener(view -> Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
+        fabAnyadir.setOnClickListener(view -> {
+            ControladorPrincipal principal = new ControladorPrincipal(MainActivity.this);
+            principal.lanzarRiego();
+            Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        });
+
 
         FloatingActionButton fabAjustes = findViewById(R.id.fabAjustes);
-        fabAjustes.setOnClickListener(view -> Snackbar.make(view, "Botón para abrir las preferencias", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show());
+        fabAjustes.setOnClickListener(view ->{
+            ControladorPrincipal principal = new ControladorPrincipal(MainActivity.this);
+            principal.lanzarAjustes();
+            Snackbar.make(view, "Botón para abrir los ajustes", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        });
+    }
+
+    public void Riego(View view) {
+        ControladorPrincipal principal = new ControladorPrincipal(this);
+        principal.lanzarRiego();
     }
 
     /*@Override public boolean onCreateOptionsMenu(Menu menu) {

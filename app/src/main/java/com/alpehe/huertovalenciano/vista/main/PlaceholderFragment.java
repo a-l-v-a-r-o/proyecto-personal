@@ -1,4 +1,4 @@
-package com.alpehe.huertovalenciano.ui.main;
+package com.alpehe.huertovalenciano.vista.main;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.alpehe.huertovalenciano.fragments.CalendarioFragment;
 import com.alpehe.huertovalenciano.R;
+import com.alpehe.huertovalenciano.vista.CalendarioFragment;
 
 /**
  * A placeholder fragment containing a simple view.

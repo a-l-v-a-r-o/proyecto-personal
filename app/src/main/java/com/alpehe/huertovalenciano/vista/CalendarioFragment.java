@@ -1,4 +1,4 @@
-package com.alpehe.huertovalenciano.fragments;
+package com.alpehe.huertovalenciano.vista;
 
 import android.os.Bundle;
 

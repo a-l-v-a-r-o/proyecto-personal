@@ -1,4 +1,4 @@
-package com.alpehe.huertovalenciano.ui.main;
+package com.alpehe.huertovalenciano.vista.main;
 
 import android.content.Context;
 
