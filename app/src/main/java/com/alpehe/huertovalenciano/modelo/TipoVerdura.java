@@ -19,7 +19,7 @@ public enum TipoVerdura {
     }
     public String getTexto() { return texto; }
 
-    /*public static String[] getNombres() {
+    /*public static String[] getAllTexto() {
         String[] resultado = new String[TipoVerdura.values().length];
         for (TipoVerdura tipo : TipoVerdura.values()) {
             resultado[tipo.ordinal()] = tipo.texto;

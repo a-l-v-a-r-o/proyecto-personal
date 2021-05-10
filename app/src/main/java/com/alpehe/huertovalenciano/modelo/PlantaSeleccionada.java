@@ -1,59 +1,45 @@
 package com.alpehe.huertovalenciano.modelo;
 
-public class Planta {
+public class PlantaSeleccionada {
 
-    private String especie;
     private String nombre;
-    private TipoVerdura tipoVerudra;
     private NecesidadesHidricas necesidadesHidricas;
     private NecesidadesTermicas necesidadesTermicas;
     private NecesidadesFertilizacion necesidadesFertilizacion;
     private Problemas problemas;
     private Tareas tareas;
-    private String fecha_siembra_recomendada;
+    private String fecha_siembra;
     private String fecha_trasplante;
     private String notas;
 
-    public Planta() {
+    public PlantaSeleccionada() {
     }
 
-    public Planta(String especie, String nombre, TipoVerdura tipoVerudra, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Problemas problemas, Tareas tareas, String fecha_siembra_recomendada, String fecha_trasplante, String notas) {
-        this.especie = especie;
+    public PlantaSeleccionada(String nombre, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Problemas problemas, Tareas tareas, String fecha_siembra, String fecha_trasplante, String notas) {
         this.nombre = nombre;
-        this.tipoVerudra = tipoVerudra;
         this.necesidadesHidricas = necesidadesHidricas;
         this.necesidadesTermicas = necesidadesTermicas;
         this.necesidadesFertilizacion = necesidadesFertilizacion;
         this.problemas = problemas;
         this.tareas = tareas;
-        this.fecha_siembra_recomendada = fecha_siembra_recomendada;
+        this.fecha_siembra = fecha_siembra;
         this.fecha_trasplante = fecha_trasplante;
         this.notas = notas;
     }
 
     @Override
     public String toString() {
-        return "Planta{" +
-                "especie='" + especie + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", tipoVerudra=" + tipoVerudra +
+        return "PlantaSeleccionada{" +
+                "nombre='" + nombre + '\'' +
                 ", necesidadesHidricas=" + necesidadesHidricas +
                 ", necesidadesTermicas=" + necesidadesTermicas +
                 ", necesidadesFertilizacion=" + necesidadesFertilizacion +
                 ", problemas=" + problemas +
                 ", tareas=" + tareas +
-                ", fecha_siembra_recomendada='" + fecha_siembra_recomendada + '\'' +
+                ", fecha_siembra='" + fecha_siembra + '\'' +
                 ", fecha_trasplante='" + fecha_trasplante + '\'' +
                 ", notas='" + notas + '\'' +
                 '}';
-    }
-
-    public String getEspecie() {
-        return especie;
-    }
-
-    public void setEspecie(String especie) {
-        this.especie = especie;
     }
 
     public String getNombre() {
@@ -62,14 +48,6 @@ public class Planta {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public TipoVerdura getTipoVerudra() {
-        return tipoVerudra;
-    }
-
-    public void setTipoVerudra(TipoVerdura tipoVerudra) {
-        this.tipoVerudra = tipoVerudra;
     }
 
     public NecesidadesHidricas getNecesidadesHidricas() {
@@ -112,12 +90,12 @@ public class Planta {
         this.tareas = tareas;
     }
 
-    public String getFecha_siembra_recomendada() {
-        return fecha_siembra_recomendada;
+    public String getFecha_siembra() {
+        return fecha_siembra;
     }
 
-    public void setFecha_siembra_recomendada(String fecha_siembra_recomendada) {
-        this.fecha_siembra_recomendada = fecha_siembra_recomendada;
+    public void setFecha_siembra(String fecha_siembra) {
+        this.fecha_siembra = fecha_siembra;
     }
 
     public String getFecha_trasplante() {
@@ -135,17 +113,4 @@ public class Planta {
     public void setNotas(String notas) {
         this.notas = notas;
     }
-
-    /*String dateStr = "04/05/2010";
-
-    SimpleDateFormat curFormater = new SimpleDateFormat("dd/MM/yyyy");
-    Date dateObj = curFormater.parse(dateStr);
-    SimpleDateFormat postFormater = new SimpleDateFormat("MMMM dd, yyyy");
-
-    String newDateStr = postFormater.format(dateObj);*/
-
-    /*Date c = Calendar.getInstance().getTime();
-System.out.println("Current time => " + c);
-    SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
-    String formattedDate = df.format(c);*/
 }
