@@ -17,6 +17,8 @@ import com.alpehe.huertovalenciano.vista.main.SectionsPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
+    ControladorPrincipal principal;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(sectionsPagerAdapter);
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
+
+        principal = new ControladorPrincipal(MainActivity.this);
 
         iniciarBotonesFlotantes();
 
@@ -38,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fabAnyadir = findViewById(R.id.fabAnyadir);
         fabAnyadir.setOnClickListener(view -> {
-            ControladorPrincipal principal = new ControladorPrincipal(MainActivity.this);
             principal.lanzarRiego();
             Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
@@ -47,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fabAjustes = findViewById(R.id.fabAjustes);
         fabAjustes.setOnClickListener(view ->{
-            ControladorPrincipal principal = new ControladorPrincipal(MainActivity.this);
             principal.lanzarBotones();
             Snackbar.make(view, "Botón para abrir los ajustes", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
@@ -55,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Riego(View view) {
-        ControladorPrincipal principal = new ControladorPrincipal(this);
         principal.lanzarRiego();
     }
 

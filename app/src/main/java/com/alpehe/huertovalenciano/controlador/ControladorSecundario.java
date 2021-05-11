@@ -3,12 +3,16 @@ package com.alpehe.huertovalenciano.controlador;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.view.Gravity;
 import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 
 public class ControladorSecundario {
 
@@ -50,5 +54,43 @@ public class ControladorSecundario {
             return null;
         }
         return data;
+    }
+
+    //EN EL MANIFEST <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    /*public boolean compruebaConexionInternet(Context context){
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = connectivityManager.getActiveNetworkInfo();
+        if (info == null || !info.isConnected() || !info.isAvailable()) {
+            return false;
+        }
+        return true;
+    }*/
+
+    public String sysdate (){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        String strDate = sdf.format(c.getTime());
+        return strDate;
+    }
+
+    public String anyoEnCurso (){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
+        String strDate = sdf.format(c.getTime());
+        return strDate;
+    }
+
+    public String sysdateFecha (){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        String strDate = sdf.format(c.getTime());
+        return strDate;
+    }
+
+    public String sysdateHours (){
+        Calendar c = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        String strDate = sdf.format(c.getTime());
+        return strDate;
     }
 }
