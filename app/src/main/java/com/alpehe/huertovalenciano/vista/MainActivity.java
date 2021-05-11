@@ -27,6 +27,11 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tabs = findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
+        iniciarBotonesFlotantes();
+
+    }
+
+    public void iniciarBotonesFlotantes(){
         FloatingActionMenu faMenu = findViewById(R.id.faMenu);
         faMenu.setClosedOnTouchOutside(true);
 
@@ -43,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fabAjustes = findViewById(R.id.fabAjustes);
         fabAjustes.setOnClickListener(view ->{
             ControladorPrincipal principal = new ControladorPrincipal(MainActivity.this);
-            principal.lanzarAjustes();
+            principal.lanzarBotones();
             Snackbar.make(view, "Botón para abrir los ajustes", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         });
