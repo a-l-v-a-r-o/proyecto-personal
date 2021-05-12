@@ -43,37 +43,16 @@ public class MainActivity extends AppCompatActivity {
         FloatingActionButton fabAnyadir = findViewById(R.id.fabAnyadir);
         fabAnyadir.setOnClickListener(view -> {
             principal.lanzarRiego();
-            Snackbar.make(view, "Botón para añadir plantas", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
         });
 
 
         FloatingActionButton fabAjustes = findViewById(R.id.fabAjustes);
         fabAjustes.setOnClickListener(view ->{
-            principal.lanzarBotones();
-            Snackbar.make(view, "Botón para abrir los ajustes", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
+            principal.lanzarAjustes();
         });
     }
 
     public void Riego(View view) {
         principal.lanzarRiego();
     }
-
-    /*@Override public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true; *//** true -> el menú ya está visible *//*
-    }
-
-    @Override public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.acercaDe) {
-            *//*lanzarAcercaDe(null);*//*
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
 }

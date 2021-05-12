@@ -1,16 +1,16 @@
 package com.alpehe.huertovalenciano.controlador;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
 import androidx.core.content.FileProvider;
 
 import com.alpehe.huertovalenciano.BuildConfig;
-import com.alpehe.huertovalenciano.modelo.PlantaSeleccionada;
+import com.alpehe.huertovalenciano.vista.AjustesActivity;
 import com.alpehe.huertovalenciano.vista.BotonesActivity;
 import com.alpehe.huertovalenciano.vista.RiegoActivity;
+import com.alpehe.huertovalenciano.vista.VistaPlantaActivity;
 
 import java.io.File;
 
@@ -22,22 +22,22 @@ public class ControladorPrincipal {
         this.vActividad = pActividad;
     }
 
-    /*public void lanzarPlantas(){
-        Intent plantas = new Intent(vActividad, PlantasActivity.class);
+    /*public void lanzarListaPlantas(){
+        Intent plantas = new Intent(vActividad, ListaPlantasActivity.class);
         vActividad.startActivity(plantas);
     }
-    public Intent lanzarPlantasForResult(){
-        Intent plantas = new Intent(vActividad, PlantasActivity.class);
+    public Intent lanzarListaPlantasReturn(){
+        Intent plantas = new Intent(vActividad, ListaPlantasActivity.class);
         return plantas;
     }*/
 
-    public void lanzarPlantaSeleccionada(){
-        Intent pSeleccionada = new Intent(vActividad, PlantaSeleccionada.class);
-        vActividad.startActivity(pSeleccionada);
+    public void lanzarVistaPlanta(){
+        Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
+        vActividad.startActivity(vistaP);
     }
-    public Intent lanzarPlantaSeleccionadaReturn(){
-        Intent pSeleccionada = new Intent(vActividad, PlantaSeleccionada.class);
-        return pSeleccionada;
+    public Intent lanzarVistaPlantaReturn(){
+        Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
+        return vistaP;
     }
 
     public void lanzarRiego(){
@@ -59,13 +59,13 @@ public class ControladorPrincipal {
     }
 
     public void lanzarAjustes(){
-        /*Intent pref = new Intent(vActividad, AjustesActivity.class);
-        vActividad.startActivity(pref);*/
+        Intent ajustes = new Intent(vActividad, AjustesActivity.class);
+        vActividad.startActivity(ajustes);
     }
-    /*public Intent lanzarAjustesReturn(){
-        Intent pref = new Intent(vActividad, AjustesActivity.class);
-        return pref;
-    }*/
+    public Intent lanzarAjustesReturn(){
+        Intent ajustes = new Intent(vActividad, AjustesActivity.class);
+        return ajustes;
+    }
 
     public void lanzarAcercaDe(){
         /*Intent acercaDe = new Intent(vActividad, AcercaDeActivity.class);

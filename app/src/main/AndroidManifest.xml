@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.alpehe.huertovalenciano">
 
-    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HuertoValenciano">
-        <activity android:name=".vista.BotonesActivity"></activity>
+        <activity
+            android:name=".vista.AjustesActivity"
+            android:label="@string/title_activity_ajustes"></activity>
+        <activity android:name=".vista.BotonesActivity" />
         <activity
             android:name=".vista.VistaPlantaActivity"
             android:label="@string/title_activity_vista_planta"
-            android:theme="@style/Theme.HuertoValenciano.NoActionBar"></activity>
+            android:theme="@style/Theme.HuertoValenciano.NoActionBar" />
         <activity android:name=".vista.RiegoActivity" />
         <activity
             android:name=".vista.MainActivity"
