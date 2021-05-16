@@ -1,26 +1,28 @@
-package com.alpehe.huertovalenciano.vista;
+package com.alpehe.huertovalenciano;
 
 import android.os.Bundle;
 
-import com.alpehe.huertovalenciano.databinding.ActivityVistaPlantaBinding;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
 import android.view.View;
-import com.alpehe.huertovalenciano.R;
+
+import com.alpehe.huertovalenciano.databinding.ActivityVistaPlantaBinding;
 
 public class VistaPlantaActivity extends AppCompatActivity {
 
-private ActivityVistaPlantaBinding binding;
+    private ActivityVistaPlantaBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-     binding = ActivityVistaPlantaBinding.inflate(getLayoutInflater());
-     setContentView(binding.getRoot());
+        binding = ActivityVistaPlantaBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);

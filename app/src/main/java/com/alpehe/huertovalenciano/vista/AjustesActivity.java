@@ -14,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class AjustesActivity extends AppCompatActivity {
 
-    Button btnAcercaDe, btnDonar, btnCompartir;
+    Button btnAcercaDe, btnDonar, btnCompartir, btnHistorial;
     ControladorPrincipal principal;
 
     @Override
@@ -48,6 +48,7 @@ public class AjustesActivity extends AppCompatActivity {
         btnAcercaDe = findViewById(R.id.btnAcercaDe);
         btnCompartir = findViewById(R.id.btnCompartir);
         btnDonar = findViewById(R.id.btnDonar);
+        btnHistorial = findViewById(R.id.btnHistorial);
     }
 
     public void iniciarAcciones(){
@@ -71,6 +72,13 @@ public class AjustesActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Snackbar.make(v, "Sin acción asignada", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+            }
+        });
+
+        btnHistorial.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }

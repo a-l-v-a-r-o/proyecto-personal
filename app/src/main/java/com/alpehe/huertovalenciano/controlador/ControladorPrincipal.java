@@ -7,10 +7,10 @@ import android.net.Uri;
 import androidx.core.content.FileProvider;
 
 import com.alpehe.huertovalenciano.BuildConfig;
+import com.alpehe.huertovalenciano.VistaPlantaActivity;
 import com.alpehe.huertovalenciano.vista.AjustesActivity;
 import com.alpehe.huertovalenciano.vista.BotonesActivity;
 import com.alpehe.huertovalenciano.vista.RiegoActivity;
-import com.alpehe.huertovalenciano.vista.VistaPlantaActivity;
 
 import java.io.File;
 
