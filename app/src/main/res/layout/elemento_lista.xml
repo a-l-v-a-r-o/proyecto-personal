@@ -6,10 +6,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="4dp">
-        <ImageView android:id="@+id/foto"
+        <ImageView android:id="@+id/icono"
             android:layout_width="?android:attr/listPreferredItemHeight"
             android:layout_height="?android:attr/listPreferredItemHeight"
-            android:contentDescription="fotografía"
+            android:contentDescription="icono"
             android:src="@drawable/hoja"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>
@@ -23,7 +23,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/foto"
+        app:layout_constraintStart_toEndOf="@+id/icono"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -34,6 +34,7 @@
         android:maxLines="1"
         android:text="Especie de la planta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/foto"
+        app:layout_constraintStart_toEndOf="@+id/icono"
         app:layout_constraintTop_toBottomOf="@id/nombre" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

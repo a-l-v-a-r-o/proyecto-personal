@@ -7,6 +7,8 @@ import android.net.Uri;
 import androidx.core.content.FileProvider;
 
 import com.alpehe.huertovalenciano.BuildConfig;
+import com.alpehe.huertovalenciano.datos.ListaPlantasSeleccionadas;
+import com.alpehe.huertovalenciano.vista.ListaPlantaActivity;
 import com.alpehe.huertovalenciano.vista.MainActivity;
 import com.alpehe.huertovalenciano.vista.VistaPlantaActivity;
 import com.alpehe.huertovalenciano.vista.AjustesActivity;
@@ -27,33 +29,13 @@ public class ControladorPrincipal {
         vActividad.startActivity(main);
     }
 
-    /*public void lanzarListaPlantas(){
-        Intent plantas = new Intent(vActividad, ListaPlantasActivity.class);
+    public void lanzarListaPlantas(){
+        Intent plantas = new Intent(vActividad, ListaPlantaActivity.class);
         vActividad.startActivity(plantas);
     }
     public Intent lanzarListaPlantasReturn(){
-        Intent plantas = new Intent(vActividad, ListaPlantasActivity.class);
+        Intent plantas = new Intent(vActividad, ListaPlantaActivity.class);
         return plantas;
-    }*/
-
-    public void lanzarVistaPlanta(int pNum){
-        Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
-        vistaP.putExtra("num_iniciar", pNum);
-        vActividad.startActivity(vistaP);
-    }
-    public Intent lanzarVistaPlantaReturn(int pNum){
-        Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
-        vistaP.putExtra("num_iniciar", pNum);
-        return vistaP;
-    }
-
-    public void lanzarBotones(){
-        Intent botones = new Intent(vActividad, BotonesActivity.class);
-        vActividad.startActivity(botones);
-    }
-    public Intent lanzarBotonesReturn(){
-        Intent botones = new Intent(vActividad, BotonesActivity.class);
-        return botones;
     }
 
     public void lanzarAjustes(){

@@ -3,13 +3,14 @@
     package="com.alpehe.huertovalenciano">
 
     <application
+        android:name=".commons.Aplicacion"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/hoja"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/boton_borde_redondo"
         android:supportsRtl="true"
         android:theme="@style/Theme.HuertoValenciano">
-        <activity android:name=".vista.ListaPlanta"></activity>
+        <activity android:name=".vista.ListaPlantaActivity"></activity>
         <activity
             android:name=".vista.VistaPlantaActivity"
             android:label="@string/title_activity_vista_planta"

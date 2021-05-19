@@ -8,8 +8,13 @@ import android.os.Bundle;
 import com.alpehe.huertovalenciano.R;
 import com.alpehe.huertovalenciano.commons.AdaptadorPlantas;
 import com.alpehe.huertovalenciano.commons.Aplicacion;
+import com.alpehe.huertovalenciano.commons.ControladorDatos;
 import com.alpehe.huertovalenciano.commons.ControladorMetodosGenerales;
 import com.alpehe.huertovalenciano.commons.ControladorPrincipal;
+import com.alpehe.huertovalenciano.datos.RepositorioPlantas;
+import com.alpehe.huertovalenciano.datos.RepositorioPlantasSeleccionadas;
+import com.alpehe.huertovalenciano.modelo.Planta;
+import com.alpehe.huertovalenciano.modelo.PlantaSeleccionada;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -29,23 +34,38 @@ public class VistaPlantaActivity extends AppCompatActivity {
     private ActivityVistaPlantaBinding binding;
     ControladorPrincipal c;
     ControladorMetodosGenerales cmg;
+ControladorDatos cDatos;
+    RepositorioPlantas plantas;
+    RepositorioPlantasSeleccionadas plantasS;
+
+    Planta planta;
+    PlantaSeleccionada plantaS;
 
     int num_iniciar;
-
+    int pos;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Intent vPlanta = getIntent();
-        num_iniciar = vPlanta.getIntExtra("num_iniciar", 1);
+        Bundle extras = getIntent().getExtras();
+        pos = extras.getInt("pos", 0);
+        num_iniciar = extras.getInt("num_iniciar", 1);
 
         if (num_iniciar == 1) {
+
+            plantas = ((Aplicacion) getApplication()).plantas;
+            cDatos = new ControladorDatos(this, plantas);
+            planta = plantas.elemento(pos);
+
             iniciarVistasDatos1();
             iniciarAcciones1();
         }
         else if (num_iniciar == 2) {
+            plantasS = ((Aplicacion) getApplication()).plantasS;
+            cDatos = new ControladorDatos(this, plantasS);
+            plantaS = plantasS.elemento(pos);
            /* iniciarVistasDatos2();
             iniciarAcciones2();*/
         }
@@ -81,6 +101,12 @@ public class VistaPlantaActivity extends AppCompatActivity {
         });
     }
 
+
+
+
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         if (num_iniciar == 1) {
@@ -89,11 +115,8 @@ public class VistaPlantaActivity extends AppCompatActivity {
            else if (num_iniciar == 2) {
                 getMenuInflater().inflate(R.menu.menu_vista_planta_seleccionada, menu);
             }
-
         return true;
-
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

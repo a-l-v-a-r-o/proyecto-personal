@@ -33,34 +33,34 @@ public class ListaPlantas implements RepositorioPlantas {
     }
     public void añadeEjemplos() {
 
-        añade(new Planta(null,null,
+        añade(new Planta("null","Zanahoria",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
-        añade(new Planta(null,null,
+                "null","null",
+                "null"));
+        añade(new Planta("null","null",
                 null, null,null,null,null,null,
-                null,null,
-                null));
+                "null","null",
+                "null"));
 
     }
 }
