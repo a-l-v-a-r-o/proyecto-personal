@@ -10,9 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HuertoValenciano">
         <activity
-            android:name=".VistaPlantaActivity"
-            android:label="@string/title_activity_vista_planta"
+            android:name=".vista.VistaPlantaSeleccionadaActivity"
+            android:label="@string/title_activity_vista_planta_seleccionada"
             android:theme="@style/Theme.HuertoValenciano.NoActionBar"></activity>
+        <activity android:name=".vista.EditarPlantaActivity" />
+        <activity
+            android:name=".vista.VistaPlantaActivity"
+            android:label="@string/title_activity_vista_planta"
+            android:theme="@style/Theme.HuertoValenciano.NoActionBar" />
         <activity
             android:name=".vista.AjustesActivity"
             android:label="@string/title_activity_ajustes" />

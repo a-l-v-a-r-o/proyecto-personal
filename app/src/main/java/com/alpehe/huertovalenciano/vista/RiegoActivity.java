@@ -1,21 +1,17 @@
 package com.alpehe.huertovalenciano.vista;
 
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.ToggleButton;
 
 import com.alpehe.huertovalenciano.R;
-import com.alpehe.huertovalenciano.controlador.ControladorSecundario;
+import com.alpehe.huertovalenciano.controlador.ControladorMetodosGenerales;
 
 public class RiegoActivity extends AppCompatActivity {
 
@@ -55,25 +51,25 @@ public class RiegoActivity extends AppCompatActivity {
                         case 0: /*ControladorSecundario.ToastCorto(RiegoActivity.this, "-");*/
                             break;
                         case 1:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Lunes");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Lunes");
                             break;
                         case 2:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Martes");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Martes");
                             break;
                         case 3:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Miercoles");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Miercoles");
                             break;
                         case 4:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Jueves");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Jueves");
                             break;
                         case 5:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Viernes");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Viernes");
                             break;
                         case 6:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Sabado");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Sabado");
                             break;
                         case 7:
-                            ControladorSecundario.ToastCorto(RiegoActivity.this, "Domingo");
+                            ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Domingo");
                             break;
                     }
                 }else{
@@ -88,10 +84,10 @@ public class RiegoActivity extends AppCompatActivity {
         btnNotificar.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if(isChecked){
                 btnNotificar.setText("Notificarme");
-                ControladorSecundario.ToastCorto(RiegoActivity.this, "Notificarme");
+                ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "Notificarme");
             }else{
                 btnNotificar.setText("No notificarme");
-                ControladorSecundario.ToastCorto(RiegoActivity.this, "No notificarme");
+                ControladorMetodosGenerales.ToastCorto(RiegoActivity.this, "No notificarme");
             }
         });
     }

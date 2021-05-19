@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fabAnyadir = findViewById(R.id.fabAnyadir);
         fabAnyadir.setOnClickListener(view -> {
-            principal.lanzarRiego();
+            principal.lanzarVistaPlanta();
         });
 
 

@@ -7,7 +7,9 @@ import android.net.Uri;
 import androidx.core.content.FileProvider;
 
 import com.alpehe.huertovalenciano.BuildConfig;
-import com.alpehe.huertovalenciano.VistaPlantaActivity;
+import com.alpehe.huertovalenciano.vista.EditarPlantaActivity;
+import com.alpehe.huertovalenciano.vista.MainActivity;
+import com.alpehe.huertovalenciano.vista.VistaPlantaActivity;
 import com.alpehe.huertovalenciano.vista.AjustesActivity;
 import com.alpehe.huertovalenciano.vista.BotonesActivity;
 import com.alpehe.huertovalenciano.vista.RiegoActivity;
@@ -20,6 +22,11 @@ public class ControladorPrincipal {
 
     public ControladorPrincipal(Activity pActividad){
         this.vActividad = pActividad;
+    }
+
+    public void lanzarMainActivity(){
+        Intent main = new Intent(vActividad, MainActivity.class);
+        vActividad.startActivity(main);
     }
 
     /*public void lanzarListaPlantas(){
@@ -38,6 +45,15 @@ public class ControladorPrincipal {
     public Intent lanzarVistaPlantaReturn(){
         Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
         return vistaP;
+    }
+
+    public void lanzarEditarPlanta(){
+        Intent editarP = new Intent(vActividad, EditarPlantaActivity.class);
+        vActividad.startActivity(editarP);
+    }
+    public Intent lanzarEditarPlantaReturn(){
+        Intent editarP = new Intent(vActividad, EditarPlantaActivity.class);
+        return editarP;
     }
 
     public void lanzarRiego(){

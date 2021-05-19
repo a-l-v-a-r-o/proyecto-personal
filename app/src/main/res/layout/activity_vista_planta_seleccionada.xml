@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".vista.VistaPlantaActivity">
+    tools:context=".vista.VistaPlantaSeleccionadaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -41,18 +41,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="@dimen/fab_margin"
-        android:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
+        fab:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
         app:layout_anchorGravity="bottom|end"
         app:menu_fab_size="mini"
         app:menu_openDirection="down"
-        fab:menu_buttonSpacing="@dimen/btnSpacing">
+        fab:menu_buttonSpacing="@dimen/btnSpacing"
+        android:paddingTop="14dp">
 
         <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabAnyadir"
+            android:id="@+id/fabBorrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_baseline_playlist_add_24"
+            android:src="@android:drawable/ic_delete"
             app:fab_size="mini" />
 
         <com.github.clans.fab.FloatingActionButton
@@ -62,6 +63,14 @@
             android:layout_margin="@dimen/fab_margin"
             android:src="@drawable/ic_baseline_edit_24"
             app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fabTerminado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_menu_save"
+            app:fab_size="normal" />
     </com.github.clans.fab.FloatingActionMenu>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,9 +1,11 @@
-package com.alpehe.huertovalenciano;
+package com.alpehe.huertovalenciano.vista;
 
 import android.os.Bundle;
 
+import com.alpehe.huertovalenciano.controlador.ControladorPrincipal;
+import com.github.clans.fab.FloatingActionButton;
+import com.github.clans.fab.FloatingActionMenu;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,10 +18,13 @@ import com.alpehe.huertovalenciano.databinding.ActivityVistaPlantaBinding;
 public class VistaPlantaActivity extends AppCompatActivity {
 
     private ActivityVistaPlantaBinding binding;
+    ControladorPrincipal c;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        c = new ControladorPrincipal(this);
 
         binding = ActivityVistaPlantaBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -29,12 +34,26 @@ public class VistaPlantaActivity extends AppCompatActivity {
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
         toolBarLayout.setTitle(getTitle());
 
-        FloatingActionButton fab = binding.fab;
-        fab.setOnClickListener(new View.OnClickListener() {
+        iniciarBotonesFlotantes();
+
+    }
+
+    public void iniciarBotonesFlotantes(){
+        FloatingActionMenu faMenu = binding.faMenu;
+        faMenu.setClosedOnTouchOutside(true);
+
+        FloatingActionButton fabAnyadir = binding.fabAnyadir;
+        fabAnyadir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                c.lanzarMainActivity();
+            }
+        });
+        FloatingActionButton fabEditar = binding.fabEditar;
+        fabEditar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                c.lanzarEditarPlantaReturn();
             }
         });
     }

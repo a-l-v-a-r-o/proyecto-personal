@@ -8,7 +8,7 @@ public class Planta {
     private NecesidadesHidricas necesidadesHidricas;
     private NecesidadesTermicas necesidadesTermicas;
     private NecesidadesFertilizacion necesidadesFertilizacion;
-    private Problemas problemas;
+    private Amenaza amenaza;
     private Tareas tareas;
     private String fecha_siembra_recomendada;
     private String fecha_trasplante;
@@ -17,14 +17,14 @@ public class Planta {
     public Planta() {
     }
 
-    public Planta(String especie, String nombre, TipoVerdura tipoVerudra, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Problemas problemas, Tareas tareas, String fecha_siembra_recomendada, String fecha_trasplante, String notas) {
+    public Planta(String especie, String nombre, TipoVerdura tipoVerudra, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Amenaza amenaza, Tareas tareas, String fecha_siembra_recomendada, String fecha_trasplante, String notas) {
         this.especie = especie;
         this.nombre = nombre;
         this.tipoVerudra = tipoVerudra;
         this.necesidadesHidricas = necesidadesHidricas;
         this.necesidadesTermicas = necesidadesTermicas;
         this.necesidadesFertilizacion = necesidadesFertilizacion;
-        this.problemas = problemas;
+        this.amenaza = amenaza;
         this.tareas = tareas;
         this.fecha_siembra_recomendada = fecha_siembra_recomendada;
         this.fecha_trasplante = fecha_trasplante;
@@ -40,7 +40,7 @@ public class Planta {
                 ", necesidadesHidricas=" + necesidadesHidricas +
                 ", necesidadesTermicas=" + necesidadesTermicas +
                 ", necesidadesFertilizacion=" + necesidadesFertilizacion +
-                ", problemas=" + problemas +
+                ", amenaza=" + amenaza +
                 ", tareas=" + tareas +
                 ", fecha_siembra_recomendada='" + fecha_siembra_recomendada + '\'' +
                 ", fecha_trasplante='" + fecha_trasplante + '\'' +
@@ -96,12 +96,12 @@ public class Planta {
         this.necesidadesFertilizacion = necesidadesFertilizacion;
     }
 
-    public Problemas getProblemas() {
-        return problemas;
+    public Amenaza getAmenaza() {
+        return amenaza;
     }
 
-    public void setProblemas(Problemas problemas) {
-        this.problemas = problemas;
+    public void setAmenaza(Amenaza amenaza) {
+        this.amenaza = amenaza;
     }
 
     public Tareas getTareas() {

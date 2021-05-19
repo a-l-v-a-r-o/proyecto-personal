@@ -1,7 +1,6 @@
 package com.alpehe.huertovalenciano.modelo;
 
-public enum Problemas {
-
+public enum TipoAmenaza {
     OTROS("Otros"),
     HOJA ("Hoja"),
     TALLO ("Tallo"),
@@ -15,17 +14,16 @@ public enum Problemas {
     RIZOMA ("Rizoma");
 
     private final String texto;
-    Problemas(String texto) {
+    TipoAmenaza(String texto) {
         this.texto = texto;
     }
     public String getTexto() { return texto; }
 
     /*public static String[] getAllTexto() {
-        String[] resultado = new String[Problemas.values().length];
-        for (Problemas problemas : Problemas.values()) {
-            resultado[tipo.ordinal()] = problemas.texto;
+        String[] resultado = new String[TipoVerdura.values().length];
+        for (TipoVerdura tipo : TipoVerdura.values()) {
+            resultado[tipo.ordinal()] = tipo.texto;
         }
         return resultado;
     }*/
-
 }
