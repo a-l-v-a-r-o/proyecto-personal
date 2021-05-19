@@ -2,6 +2,7 @@ package com.alpehe.huertovalenciano.modelo;
 
 public class Amenaza {
 
-    TipoAmenaza nombre;
-    String descripcion;
+    private TipoAmenaza tipoAmenaza;
+    private String descripcionAmenaza;
+
 }

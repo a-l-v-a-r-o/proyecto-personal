@@ -45,4 +45,8 @@ public class ControladorDatos {
     public void guardar(int id, PlantaSeleccionada nuevaPlantaS) {
         plantasS.actualiza(id, nuevaPlantaS);
     }
+
+    public void añadirS(PlantaSeleccionada plantaS){
+            plantasS.añade(plantaS);
+    }
 }

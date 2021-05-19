@@ -15,7 +15,7 @@ import com.alpehe.huertovalenciano.modelo.PlantaSeleccionada;
 
 public class AdaptadorPlantasSeleccionadas extends
         RecyclerView.Adapter<AdaptadorPlantasSeleccionadas.ViewHolder> {
-    protected RepositorioPlantasSeleccionadas plantasS;         // Lista de plantas a mostrar
+    protected RepositorioPlantasSeleccionadas plantasS;
     protected View.OnClickListener onClickListener;
 
     public AdaptadorPlantasSeleccionadas(RepositorioPlantasSeleccionadas plantasS) {
@@ -24,18 +24,18 @@ public class AdaptadorPlantasSeleccionadas extends
 
     //Creamos nuestro ViewHolder, con los tipos de elementos a modificar
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView nombre, fecha1, fecha2;
+        public TextView nombreS, fecha1, fecha2;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            nombre = itemView.findViewById(R.id.nombre);
+            nombreS = itemView.findViewById(R.id.nombreS);
             fecha1 = itemView.findViewById(R.id.fecha1);
             fecha2 = itemView.findViewById(R.id.fecha2);
 
         }
         // Personalizamos un ViewHolder a partir de un planta
         public void personaliza(PlantaSeleccionada plantaS) {
-            nombre.setText(plantaS.getNombre());
+            nombreS.setText(plantaS.getNombre());
             fecha1.setText("Siembra:");
             fecha2.setText("Cosecha:");
             fecha1.append(plantaS.getFecha_siembra());
@@ -48,7 +48,7 @@ public class AdaptadorPlantasSeleccionadas extends
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Inflamos la vista desde el xml
         View v = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.elemento_lista, parent, false);
+                .inflate(R.layout.elemento_lista_seleccionada, parent, false);
         v.setOnClickListener(onClickListener);
         return new ViewHolder(v);
     }

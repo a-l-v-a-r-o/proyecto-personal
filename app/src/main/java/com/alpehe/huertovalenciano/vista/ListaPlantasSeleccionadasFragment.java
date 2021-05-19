@@ -93,9 +93,11 @@ public class ListaPlantasSeleccionadasFragment extends Fragment {
             }
         });
 
+        TextView texto = v.findViewById(R.id.textView);
         if(adaptadorS.getItemCount() == 0){
-            TextView texto = v.findViewById(R.id.textView);
             texto.setVisibility(View.VISIBLE);
+        }else{
+            texto.setVisibility(View.GONE);
         }
 
         return v;

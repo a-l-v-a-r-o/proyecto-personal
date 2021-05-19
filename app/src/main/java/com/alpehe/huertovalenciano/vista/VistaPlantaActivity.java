@@ -34,7 +34,7 @@ public class VistaPlantaActivity extends AppCompatActivity {
     private ActivityVistaPlantaBinding binding;
     ControladorPrincipal c;
     ControladorMetodosGenerales cmg;
-ControladorDatos cDatos;
+    ControladorDatos cDatos, cDatosS;
     RepositorioPlantas plantas;
     RepositorioPlantasSeleccionadas plantasS;
 
@@ -49,25 +49,30 @@ ControladorDatos cDatos;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        c = new ControladorPrincipal(this);
+
         Bundle extras = getIntent().getExtras();
         pos = extras.getInt("pos", 0);
         num_iniciar = extras.getInt("num_iniciar", 1);
 
-        if (num_iniciar == 1) {
+        plantas = ((Aplicacion) getApplication()).plantas;
+        cDatos = new ControladorDatos(this, plantas);
+        planta = plantas.elemento(pos);
 
-            plantas = ((Aplicacion) getApplication()).plantas;
-            cDatos = new ControladorDatos(this, plantas);
+            plantasS = ((Aplicacion) getApplication()).plantasS;
+            cDatosS = new ControladorDatos(this, plantasS);
+
+        if (num_iniciar == 1) {
             planta = plantas.elemento(pos);
 
             iniciarVistasDatos1();
             iniciarAcciones1();
         }
         else if (num_iniciar == 2) {
-            plantasS = ((Aplicacion) getApplication()).plantasS;
-            cDatos = new ControladorDatos(this, plantasS);
             plantaS = plantasS.elemento(pos);
-           /* iniciarVistasDatos2();
-            iniciarAcciones2();*/
+
+            iniciarVistasDatos2();
+            iniciarAcciones2();
         }
 
 
@@ -83,9 +88,22 @@ ControladorDatos cDatos;
         Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
         CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
-        toolBarLayout.setTitle(getTitle());
+        toolBarLayout.setTitle(planta.getNombre());
 
 
+    }
+
+    public void iniciarVistasDatos2(){
+        c = new ControladorPrincipal(this);
+        cmg = new ControladorMetodosGenerales();
+
+        binding = ActivityVistaPlantaBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+
+        Toolbar toolbar = binding.toolbar;
+        setSupportActionBar(toolbar);
+        CollapsingToolbarLayout toolBarLayout = binding.toolbarLayout;
+        toolBarLayout.setTitle(plantaS.getNombre());
     }
 
     public void iniciarAcciones1(){
@@ -93,7 +111,13 @@ ControladorDatos cDatos;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                plantaS = new PlantaSeleccionada(
+                        planta.getNombre(),
+                        null, null, null,null,null,
+                        planta.getFecha_siembra_recomendada(),planta.getFecha_trasplante(),
+                        planta.getNotas());
 
+                cDatosS.añadirS(plantaS);
 
 
                 c.lanzarMainActivity();
@@ -101,7 +125,16 @@ ControladorDatos cDatos;
         });
     }
 
-
+    public void iniciarAcciones2(){
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cDatos.borrar(pos);
+                c.lanzarMainActivity();
+            }
+        });
+    }
 
 
 
@@ -137,7 +170,7 @@ ControladorDatos cDatos;
             builder.setMessage("¿Seguro que quieres borrar esta verdura de tu lista?");
             builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id1) {
-                    // todo eliminar el item del array de objetos, qué será el mismo número que la posicion de la lista
+                    cDatos.borrar(pos);
                     c.lanzarMainActivity();
                 } });
             builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
