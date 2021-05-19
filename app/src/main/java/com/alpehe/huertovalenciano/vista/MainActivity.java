@@ -1,13 +1,11 @@
 package com.alpehe.huertovalenciano.vista;
 
 import android.os.Bundle;
-import android.view.View;
 
 import com.alpehe.huertovalenciano.R;
-import com.alpehe.huertovalenciano.controlador.ControladorPrincipal;
+import com.alpehe.huertovalenciano.commons.ControladorPrincipal;
 import com.github.clans.fab.FloatingActionButton;
 import com.github.clans.fab.FloatingActionMenu;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.viewpager.widget.ViewPager;
@@ -31,7 +29,12 @@ public class MainActivity extends AppCompatActivity {
 
         principal = new ControladorPrincipal(MainActivity.this);
 
+        iniciarVistas();
         iniciarBotonesFlotantes();
+
+    }
+
+    public void iniciarVistas(){
 
     }
 
@@ -42,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton fabAnyadir = findViewById(R.id.fabAnyadir);
         fabAnyadir.setOnClickListener(view -> {
-            principal.lanzarVistaPlanta();
+            principal.lanzarVistaPlanta(1);
         });
 
 
@@ -50,9 +53,5 @@ public class MainActivity extends AppCompatActivity {
         fabAjustes.setOnClickListener(view ->{
             principal.lanzarAjustes();
         });
-    }
-
-    public void Riego(View view) {
-        principal.lanzarRiego();
     }
 }

@@ -13,46 +13,49 @@
         android:layout_height="match_parent">
 
 
-        <TextView
-            android:id="@+id/txtRiego"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="452dp"
-            android:text="Modificar riego"
-            android:textColor="#089F29"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnRiego"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="440dp"
-            android:drawableBottom="@android:drawable/ic_menu_edit"
-            android:insetTop="0dp"
-            android:insetBottom="0dp"
-            android:onClick="Riego"
-            app:cornerRadius="50dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="OnClick" />
-
         <CalendarView
             android:id="@+id/calendario"
             style="@android:style/Widget.Holo.Light.CalendarView"
-            android:layout_width="413dp"
+            android:layout_width="match_parent"
             android:layout_height="336dp"
-            android:forceDarkAllowed="false"
             android:showWeekNumber="false"
             android:transitionGroup="false"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!--app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"-->
+        <TextView
+            android:id="@+id/txtRiego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:text="Día de riego"
+            android:textColor="#089F29"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendario" />
+
+        <Spinner
+            android:id="@+id/spnSemana"
+            android:layout_width="235dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRiego" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="55dp"
+            android:layout_height="270dp"
+            android:background="#883CA503"
+            android:backgroundTint="#1E9803"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/calendario" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

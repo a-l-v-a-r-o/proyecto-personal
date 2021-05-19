@@ -1,4 +1,4 @@
-package com.alpehe.huertovalenciano.controlador;
+package com.alpehe.huertovalenciano.commons;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -7,12 +7,10 @@ import android.net.Uri;
 import androidx.core.content.FileProvider;
 
 import com.alpehe.huertovalenciano.BuildConfig;
-import com.alpehe.huertovalenciano.vista.EditarPlantaActivity;
 import com.alpehe.huertovalenciano.vista.MainActivity;
 import com.alpehe.huertovalenciano.vista.VistaPlantaActivity;
 import com.alpehe.huertovalenciano.vista.AjustesActivity;
 import com.alpehe.huertovalenciano.vista.BotonesActivity;
-import com.alpehe.huertovalenciano.vista.RiegoActivity;
 
 import java.io.File;
 
@@ -38,31 +36,15 @@ public class ControladorPrincipal {
         return plantas;
     }*/
 
-    public void lanzarVistaPlanta(){
+    public void lanzarVistaPlanta(int pNum){
         Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
+        vistaP.putExtra("num_iniciar", pNum);
         vActividad.startActivity(vistaP);
     }
-    public Intent lanzarVistaPlantaReturn(){
+    public Intent lanzarVistaPlantaReturn(int pNum){
         Intent vistaP = new Intent(vActividad, VistaPlantaActivity.class);
+        vistaP.putExtra("num_iniciar", pNum);
         return vistaP;
-    }
-
-    public void lanzarEditarPlanta(){
-        Intent editarP = new Intent(vActividad, EditarPlantaActivity.class);
-        vActividad.startActivity(editarP);
-    }
-    public Intent lanzarEditarPlantaReturn(){
-        Intent editarP = new Intent(vActividad, EditarPlantaActivity.class);
-        return editarP;
-    }
-
-    public void lanzarRiego(){
-            Intent riego = new Intent(vActividad, RiegoActivity.class);
-        vActividad.startActivity(riego);
-    }
-    public Intent lanzarRiegoReturn(){
-        Intent riego = new Intent(vActividad, RiegoActivity.class);
-        return  riego;
     }
 
     public void lanzarBotones(){

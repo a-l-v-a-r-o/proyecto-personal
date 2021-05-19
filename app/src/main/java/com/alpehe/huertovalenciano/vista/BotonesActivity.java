@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.alpehe.huertovalenciano.R;
-import com.alpehe.huertovalenciano.controlador.ControladorPrincipal;
+import com.alpehe.huertovalenciano.commons.ControladorPrincipal;
 
 public class BotonesActivity extends AppCompatActivity {
 

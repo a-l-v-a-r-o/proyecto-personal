@@ -1,17 +1,10 @@
-package com.alpehe.huertovalenciano.controlador;
+package com.alpehe.huertovalenciano.commons;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.view.Gravity;
 import android.widget.Toast;
-
-import com.alpehe.huertovalenciano.R;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
@@ -31,23 +24,6 @@ public class ControladorMetodosGenerales {
         Toast toast = Toast.makeText(pContext,pMensaje, Toast.LENGTH_LONG);
         toast.setGravity(Gravity.CENTER, 0,500);
         toast.show();
-    }
-
-    public void dialogoBorrar(Context pContexto, int pPosicion) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(pContexto);
-
-        builder.setTitle("ATENCIÓN");
-        builder.setIcon(android.R.drawable.ic_menu_delete);
-        builder.setMessage("¿Seguro que quieres borrar esta verdura de tu lista?");
-        builder.setPositiveButton("Sí", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id1) {
-                // todo eliminar el item del array de objetos, qué será el mismo número que la posicion de la lista
-            } });
-        builder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface dialog, int id2) {
-                dialog.cancel();
-            } });
-        builder.show();
     }
 
     public byte[] filetoByteArray(String path) {

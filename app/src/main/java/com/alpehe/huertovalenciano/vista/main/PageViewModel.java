@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModel;
 public class PageViewModel extends ViewModel {
 
     private MutableLiveData<Integer> mIndex = new MutableLiveData<>();
-    private LiveData<String> mText = Transformations.map(mIndex, input -> "Hello world from section: " + input);
+    private LiveData<String> mText = Transformations.map(mIndex, input -> "Para comenzar selecciona una planta con el boton o desliza para ver el calendario de riego.");
 
     public void setIndex(int index) {
         mIndex.setValue(index);

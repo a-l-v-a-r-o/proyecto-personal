@@ -1,7 +1,45 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <PreferenceCategory app:title="@string/messages_header">
+
+    <PreferenceCategory app:title="AJUSTES GENERALES">
+        <CheckBoxPreference
+            android:key="notificaciones"
+            android:summary="Mandar notificaciones"
+            android:title="Notificarme" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="AJUSTES DE RIEGO">
+
+        <SwitchPreferenceCompat
+            app:defaultValue="true"
+            app:key="riego"
+            app:title="Regar" />
+
+        <ListPreference
+            app:dependency="riego"
+            android:defaultValue="0"
+            android:entries="@array/tipoRiego"
+            android:entryValues="@array/tipoRiegoPosiciones"
+            android:key="tipoRiego"
+            android:summary="Elije como regar"
+            android:title="Tipo de eriego" />
+
+    </PreferenceCategory>
+
+
+
+    <!--<SwitchPreferenceCompat
+            app:key="sync"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />
 
         <EditTextPreference
             app:key="signature"
@@ -14,23 +52,6 @@
             app:entryValues="@array/reply_values"
             app:key="reply"
             app:title="@string/reply_title"
-            app:useSimpleSummaryProvider="true" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory app:title="@string/sync_header">
-
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
-
-        <SwitchPreferenceCompat
-            app:dependency="sync"
-            app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
-
-    </PreferenceCategory>
+            app:useSimpleSummaryProvider="true" />-->
 
 </PreferenceScreen>

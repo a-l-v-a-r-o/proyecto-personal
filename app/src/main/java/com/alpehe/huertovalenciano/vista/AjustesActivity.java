@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
 
 import com.alpehe.huertovalenciano.R;
-import com.alpehe.huertovalenciano.controlador.ControladorPrincipal;
+import com.alpehe.huertovalenciano.commons.ControladorPrincipal;
 import com.google.android.material.snackbar.Snackbar;
 
 public class AjustesActivity extends AppCompatActivity {

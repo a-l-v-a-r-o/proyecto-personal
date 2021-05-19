@@ -2,11 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:fab="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".vista.VistaPlantaSeleccionadaActivity">
+    tools:context=".vista.VistaPlantaSeleccinadaActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -34,43 +33,15 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <include layout="@layout/content_scrolling_vista_planta" />
+    <include layout="@layout/content_scrolling_vista_planta_seleccionada" />
 
-    <com.github.clans.fab.FloatingActionMenu
-        android:id="@+id/faMenu"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        fab:contentDescription="@string/hide_bottom_view_on_scroll_behavior"
+        app:layout_anchor="@id/app_bar"
         app:layout_anchorGravity="bottom|end"
-        app:menu_fab_size="mini"
-        app:menu_openDirection="down"
-        fab:menu_buttonSpacing="@dimen/btnSpacing"
-        android:paddingTop="14dp">
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabBorrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_delete"
-            app:fab_size="mini" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabEditar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@drawable/ic_baseline_edit_24"
-            app:fab_size="mini" />
-
-        <com.github.clans.fab.FloatingActionButton
-            android:id="@+id/fabTerminado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_menu_save"
-            app:fab_size="normal" />
-    </com.github.clans.fab.FloatingActionMenu>
+        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
