@@ -32,8 +32,7 @@ public class VistaPlantaActivity extends AppCompatActivity {
 
     int num_iniciar;
 
-    private RecyclerView recyclerView;
-    public AdaptadorPlantas adaptador;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,11 +50,7 @@ public class VistaPlantaActivity extends AppCompatActivity {
             iniciarAcciones2();*/
         }
 
-        adaptador = ((Aplicacion) getApplication()).adaptador;
-        recyclerView = findViewById(R.id.recycler_view);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(adaptador);
+
     }
 
     public void iniciarVistasDatos1(){

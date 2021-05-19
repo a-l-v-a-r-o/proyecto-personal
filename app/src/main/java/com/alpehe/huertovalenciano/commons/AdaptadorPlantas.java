@@ -22,31 +22,20 @@ public class AdaptadorPlantas extends
 
     //Creamos nuestro ViewHolder, con los tipos de elementos a modificar
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView nombre, direccion;
+        public TextView nombre, especie;
 
         public ViewHolder(View itemView) {
             super(itemView);
             nombre = itemView.findViewById(R.id.nombre);
-            direccion = itemView.findViewById(R.id.direccion);
+            especie = itemView.findViewById(R.id.especie);
 
         }
         // Personalizamos un ViewHolder a partir de un planta
-        /*public void personaliza(Planta planta) {
+        public void personaliza(Planta planta) {
             nombre.setText(planta.getNombre());
-            direccion.setText(planta.getDireccion());
-            int id = R.drawable.otros;
-            switch(planta.getTipo()) {
-                case RESTAURANTE:id = R.drawable.restaurante; break;
-                case BAR:    id = R.drawable.bar;     break;
-                case COPAS:   id = R.drawable.copas;    break;
-                case ESPECTACULO:id = R.drawable.espectaculos; break;
-                case HOTEL:   id = R.drawable.hotel;    break;
-                case COMPRAS:  id = R.drawable.compras;   break;
-                case EDUCACION: id = R.drawable.educacion;  break;
-                case DEPORTE:  id = R.drawable.deporte;   break;
-                case NATURALEZA: id = R.drawable.naturaleza; break;
-                case GASOLINERA: id = R.drawable.gasolinera; break;  }
-        }*/
+            especie.setText(planta.getEspecie());
+
+        }
     }
 
     // Creamos el ViewHolder con la vista de un elemento sin personalizar
@@ -62,7 +51,7 @@ public class AdaptadorPlantas extends
     @Override
     public void onBindViewHolder(ViewHolder holder, int posicion) {
         Planta planta = plantas.elemento(posicion);
-        /*holder.personaliza(planta);*/
+        holder.personaliza(planta);
     }
     // Indicamos el número de elementos de la lista
     @Override public int getItemCount() {
