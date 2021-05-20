@@ -1,8 +1,10 @@
 package com.alpehe.huertovalenciano.vista;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -193,6 +195,7 @@ public class VistaPlantaActivity extends AppCompatActivity {
     public void iniciarDatosS(){
 
         toolBarLayout.setTitle(plantaS.getNombre());
+        toolBarLayout.setExpandedTitleColor(Color.YELLOW);
 
         if(!planta.getFecha_siembra_recomendada().equals(plantaS.getFecha_siembra())){
             txtFSiembra.setText("Fecha sembrado:");

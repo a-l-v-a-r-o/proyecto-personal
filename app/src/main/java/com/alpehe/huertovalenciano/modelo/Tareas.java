@@ -1,17 +1,9 @@
 package com.alpehe.huertovalenciano.modelo;
 
 public enum Tareas {
-    OTROS("Otros"),
-    HOJA ("Hoja"),
-    TALLO ("Tallo"),
-    INFLORESCENCIA ("Inflorescencia "),
-    FRUTO ("Fruto"),
-    BULBO ("Bulbo"),
-    SEMILLA ("Semilla "),
-    RAIZ("Raíz"),
-    TUBERCULO ("Tubérculo"),
-    CORNO("Cormo"),
-    RIZOMA ("Rizoma");
+    OTRAS("Otras"),
+    ;
+
 
     private final String texto;
     Tareas(String texto) {
