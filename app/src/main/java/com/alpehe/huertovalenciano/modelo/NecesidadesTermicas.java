@@ -3,16 +3,7 @@ package com.alpehe.huertovalenciano.modelo;
 public enum NecesidadesTermicas {
 
     OTROS("Otros"),
-    HOJA ("Hoja"),
-    TALLO ("Tallo"),
-    INFLORESCENCIA ("Inflorescencia "),
-    FRUTO ("Fruto"),
-    BULBO ("Bulbo"),
-    SEMILLA ("Semilla "),
-    RAIZ("Raíz"),
-    TUBERCULO ("Tubérculo"),
-    CORNO("Cormo"),
-    RIZOMA ("Rizoma");
+    ;
 
     private final String texto;
     NecesidadesTermicas(String texto) {

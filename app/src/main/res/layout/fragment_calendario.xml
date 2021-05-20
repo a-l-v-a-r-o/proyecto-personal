@@ -18,6 +18,7 @@
             style="@android:style/Widget.Holo.Light.CalendarView"
             android:layout_width="match_parent"
             android:layout_height="336dp"
+            android:firstDayOfWeek="2"
             android:showWeekNumber="false"
             android:transitionGroup="false"
             app:layout_constraintStart_toStartOf="parent"

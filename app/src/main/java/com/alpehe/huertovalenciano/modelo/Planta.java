@@ -11,7 +11,7 @@ public class Planta {
     private Amenaza amenaza;
     private Tareas tareas;
     private String fecha_siembra_recomendada;
-    private String fecha_trasplante;
+    private String fecha_cosecha;
     private String notas;
 
     public Planta() {
@@ -27,7 +27,7 @@ public class Planta {
         this.amenaza = amenaza;
         this.tareas = tareas;
         this.fecha_siembra_recomendada = fecha_siembra_recomendada;
-        this.fecha_trasplante = fecha_trasplante;
+        this.fecha_cosecha = fecha_trasplante;
         this.notas = notas;
     }
 
@@ -43,7 +43,7 @@ public class Planta {
                 ", amenaza=" + amenaza +
                 ", tareas=" + tareas +
                 ", fecha_siembra_recomendada='" + fecha_siembra_recomendada + '\'' +
-                ", fecha_trasplante='" + fecha_trasplante + '\'' +
+                ", fecha_trasplante='" + fecha_cosecha + '\'' +
                 ", notas='" + notas + '\'' +
                 '}';
     }
@@ -120,12 +120,12 @@ public class Planta {
         this.fecha_siembra_recomendada = fecha_siembra_recomendada;
     }
 
-    public String getFecha_trasplante() {
-        return fecha_trasplante;
+    public String getFecha_cosecha() {
+        return fecha_cosecha;
     }
 
-    public void setFecha_trasplante(String fecha_trasplante) {
-        this.fecha_trasplante = fecha_trasplante;
+    public void setFecha_cosecha(String fecha_cosecha) {
+        this.fecha_cosecha = fecha_cosecha;
     }
 
     public String getNotas() {

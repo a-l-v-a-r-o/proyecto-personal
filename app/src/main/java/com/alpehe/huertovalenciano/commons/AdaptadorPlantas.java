@@ -3,7 +3,6 @@ package com.alpehe.huertovalenciano.commons;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,7 +26,7 @@ public class AdaptadorPlantas extends
 
         public ViewHolder(View itemView) {
             super(itemView);
-            nombre = itemView.findViewById(R.id.nombre);
+            nombre = itemView.findViewById(R.id.fSiembra);
             especie = itemView.findViewById(R.id.especie);
 
         }

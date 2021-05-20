@@ -17,6 +17,7 @@ public class AdaptadorPlantasSeleccionadas extends
         RecyclerView.Adapter<AdaptadorPlantasSeleccionadas.ViewHolder> {
     protected RepositorioPlantasSeleccionadas plantasS;
     protected View.OnClickListener onClickListener;
+    protected View.OnLongClickListener onLongClickListener;
 
     public AdaptadorPlantasSeleccionadas(RepositorioPlantasSeleccionadas plantasS) {
         this.plantasS = plantasS;
@@ -39,7 +40,7 @@ public class AdaptadorPlantasSeleccionadas extends
             fecha1.setText("Siembra:");
             fecha2.setText("Cosecha:");
             fecha1.append(plantaS.getFecha_siembra());
-            fecha2.append(plantaS.getFecha_trasplante());
+            fecha2.append(plantaS.getFecha_cosecha());
         }
     }
 
@@ -66,5 +67,8 @@ public class AdaptadorPlantasSeleccionadas extends
 
     public void setOnItemClickListener(View.OnClickListener onClickListener) {
         this.onClickListener = onClickListener;
+    }
+    public void setOnLongClickListener(View.OnLongClickListener onLongClickListener) {
+        this.onLongClickListener = onLongClickListener;
     }
 }

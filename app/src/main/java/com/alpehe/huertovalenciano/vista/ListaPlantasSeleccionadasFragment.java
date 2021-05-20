@@ -91,8 +91,15 @@ public class ListaPlantasSeleccionadasFragment extends Fragment {
                 int pos = recyclerView.getChildAdapterPosition(v);
                 cDatos.mostrar(pos,2);
             }
-        });
 
+        });
+        adaptadorS.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                return false;
+            }
+        });
         TextView texto = v.findViewById(R.id.textView);
         if(adaptadorS.getItemCount() == 0){
             texto.setVisibility(View.VISIBLE);

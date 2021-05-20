@@ -9,13 +9,13 @@ public class PlantaSeleccionada {
     private Amenaza amenaza;
     private Tareas tareas;
     private String fecha_siembra;
-    private String fecha_trasplante;
+    private String fecha_cosecha;
     private String notas;
 
     public PlantaSeleccionada() {
     }
 
-    public PlantaSeleccionada(String nombre, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Amenaza amenaza, Tareas tareas, String fecha_siembra, String fecha_trasplante, String notas) {
+    public PlantaSeleccionada(String nombre, NecesidadesHidricas necesidadesHidricas, NecesidadesTermicas necesidadesTermicas, NecesidadesFertilizacion necesidadesFertilizacion, Amenaza amenaza, Tareas tareas, String fecha_siembra, String fecha_cosecha, String notas) {
         this.nombre = nombre;
         this.necesidadesHidricas = necesidadesHidricas;
         this.necesidadesTermicas = necesidadesTermicas;
@@ -23,7 +23,7 @@ public class PlantaSeleccionada {
         this.amenaza = amenaza;
         this.tareas = tareas;
         this.fecha_siembra = fecha_siembra;
-        this.fecha_trasplante = fecha_trasplante;
+        this.fecha_cosecha = fecha_cosecha;
         this.notas = notas;
     }
 
@@ -37,7 +37,7 @@ public class PlantaSeleccionada {
                 ", amenaza=" + amenaza +
                 ", tareas=" + tareas +
                 ", fecha_siembra='" + fecha_siembra + '\'' +
-                ", fecha_trasplante='" + fecha_trasplante + '\'' +
+                ", fecha_trasplante='" + fecha_cosecha + '\'' +
                 ", notas='" + notas + '\'' +
                 '}';
     }
@@ -98,12 +98,12 @@ public class PlantaSeleccionada {
         this.fecha_siembra = fecha_siembra;
     }
 
-    public String getFecha_trasplante() {
-        return fecha_trasplante;
+    public String getFecha_cosecha() {
+        return fecha_cosecha;
     }
 
-    public void setFecha_trasplante(String fecha_trasplante) {
-        this.fecha_trasplante = fecha_trasplante;
+    public void setFecha_cosecha(String fecha_cosecha) {
+        this.fecha_cosecha = fecha_cosecha;
     }
 
     public String getNotas() {

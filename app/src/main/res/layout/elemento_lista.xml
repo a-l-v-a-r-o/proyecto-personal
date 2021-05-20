@@ -15,7 +15,7 @@
             app:layout_constraintLeft_toLeftOf="parent"/>
 
     <TextView
-        android:id="@+id/nombre"
+        android:id="@+id/fSiembra"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:maxLines="1"
@@ -35,6 +35,14 @@
         android:text="Especie de la planta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/icono"
-        app:layout_constraintTop_toBottomOf="@id/nombre" />
+        app:layout_constraintTop_toBottomOf="@id/fSiembra" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#56E87F"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icono"></LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
