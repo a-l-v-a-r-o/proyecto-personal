@@ -1,0 +1,72 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/settings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:context=".vista.BotonesActivity">
+
+                <android.widget.Button
+                    android:id="@+id/btnDonar"
+                    style="@style/botonBordeRedondo"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_baseline_attach_money_24"
+                    android:text="Donar"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
+
+                <android.widget.Button
+                    android:id="@+id/btnCompartir"
+                    style="@style/botonBordeRedondo"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@android:drawable/ic_menu_send"
+                    android:text="Compartir"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAcercaDe" />
+
+                <android.widget.Button
+                    android:id="@+id/btnAcercaDe"
+                    style="@style/botonBordeRedondo"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@android:drawable/ic_dialog_info"
+                    android:text="@string/acerca_de"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHistorial" />
+
+                <android.widget.Button
+                    android:id="@+id/btnHistorial"
+                    style="@style/botonBordeRedondo"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp"
+                    android:drawableStart="@android:drawable/ic_menu_recent_history"
+                    android:text="Historial"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>

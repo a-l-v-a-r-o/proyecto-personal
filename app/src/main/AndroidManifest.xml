@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.alpehe.huertovalenciano">
+
+    <application
+        android:name=".commons.Aplicacion"
+        android:allowBackup="true"
+        android:icon="@drawable/hoja"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/boton_borde_redondo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HuertoValenciano">
+        <activity android:name=".vista.ListaPlantaActivity"></activity>
+        <activity
+            android:name=".vista.VistaPlantaActivity"
+            android:label="@string/title_activity_vista_planta"
+            android:theme="@style/Theme.HuertoValenciano.NoActionBar" />
+        <activity
+            android:name=".vista.AjustesActivity"
+            android:label="@string/title_activity_ajustes" />
+        <activity android:name=".vista.BotonesActivity" />
+        <activity
+            android:name=".vista.MainActivity"
+            android:label="@string/title_activity_principal"
+            android:theme="@style/Theme.HuertoValenciano.NoActionBar" />
+        <activity
+            android:name=".vista.SplashActivity"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

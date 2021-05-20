@@ -1,0 +1,34 @@
+<resources>
+    <string-array name="tipoRiego">
+        <item>A mano</item>
+        <item>Por goteo</item>
+    </string-array>
+    <string-array name="tipoRiegoPosiciones">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+
+    <string-array name="diasSemana">
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
+        <item>Jueves</item>
+        <item>Viernes</item>
+        <item>Sabado</item>
+        <item>Domingo</item>
+    </string-array>
+
+
+
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+</resources>

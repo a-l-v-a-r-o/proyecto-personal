@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".vista.CalendarioFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <CalendarView
+            android:id="@+id/calendario"
+            style="@android:style/Widget.Holo.Light.CalendarView"
+            android:layout_width="match_parent"
+            android:layout_height="336dp"
+            android:firstDayOfWeek="2"
+            android:showWeekNumber="false"
+            android:transitionGroup="false"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtRiego"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="32dp"
+            android:text="Día de riego"
+            android:textColor="#089F29"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calendario" />
+
+        <Spinner
+            android:id="@+id/spnSemana"
+            android:layout_width="235dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtRiego" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="55dp"
+            android:layout_height="270dp"
+            android:background="#883CA503"
+            android:backgroundTint="#1E9803"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/calendario"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/calendario" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
